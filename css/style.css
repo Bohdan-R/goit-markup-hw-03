@@ -395,6 +395,10 @@ footer {
 /*ГЛАВНЫЙ КОНТЕНТ СТРАНИЦЫ---------------*/
 /*Блок Кнопок----------------------------*/
 
+.section.portfolio {
+    border-top: 1px solid #ECECEC;
+}
+
 .button-list {
     display: flex;
     justify-content: center;
