@@ -10,6 +10,7 @@
     --primary-background-color-button: #F5F4FA;
     --primary-color-button: #212121;
     --accent-color-button: #FFFFFF;
+    --border-color: transparent;
 }
 
 body {
@@ -37,24 +38,6 @@ h6 {
     font-weight: 700;
 }
 
-/*ШАПКА САЙТА---------------------------*/
-
-/*Лого---------------------------------*/
-.logo {
-    margin-right: 93px;
-    
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    text-decoration: none;
-    color: #212121;
-}
-
-.logo > span {
-    color: #2196F3;
-}
-
 .container {
     width: 1200px;
 
@@ -64,6 +47,37 @@ h6 {
     margin-right: auto;
 
     outline: 1px solid rgb(255, 81, 0);
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section-title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+/*ШАПКА САЙТА---------------------------*/
+
+/*Лого---------------------------------*/
+.logo {
+    margin-right: 93px;
+
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+    color: #212121;
+}
+
+.logo>span {
+    color: #2196F3;
 }
 
 .container.header {
@@ -101,7 +115,7 @@ h6 {
     text-decoration: none;
 }
 
-.site-nav .link:hover, 
+.site-nav .link:hover,
 .site-nav .link:focus {
     color: var(--accent-color);
 }
@@ -112,7 +126,7 @@ h6 {
 
 /*Наши контакты---------------------------*/
 
-.contact-nav  {
+.contact-nav {
     margin-left: auto;
 }
 
@@ -125,6 +139,11 @@ h6 {
     letter-spacing: 0.02em;
     text-decoration: none;
 }
+
+.contact-link:first-child {
+    margin-right: 50px;
+}
+
 .contact-link:hover,
 .contact-link:focus {
     color: var(--accent-color);
@@ -138,6 +157,8 @@ h6 {
 }
 
 .hero-title {
+    margin-bottom: 30px;
+
     color: #FFFFFF;
     font-weight: 900;
     font-size: 44px;
@@ -147,35 +168,96 @@ h6 {
     text-align: center;
 }
 
-.hero > .link {
+.hero-link {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     background-color: #2196F3;
+    border: 1px solid var(--border-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
     color: #FFFFFF;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
     text-decoration: none;
-}
-
-/*---------------------------------*/
-.section-title {
-    font-size: 36px;
-    line-height: 1.17;
+    text-align: center;
 }
 
 /*Наши преимущества----------------------*/
-.advantag-subtitle {
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.advantage-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.advantage-item {
+    width: calc((100%-3*30px)/4);
+    margin-right: 30px;
+}
+
+.advantage-item:last-child {
+    margin-right: 0;
+}
+
+.advantage-subtitle {
+    margin-bottom: 10px;
+
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
 }
 
-.advantag-text {
+.advantage-text {
+    margin: 0;
+
     font-size: 14px;
     line-height: 1.71;
 }
 
 /*Чем мы занимаемся--------------------*/
+
+.section.activity {
+    padding-top: 0;
+}
+
+.activity-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.activity-item {
+    width: calc((100%-2*30px)/3);
+    margin-right: 30px;
+}
+
+.activity-item:last-child {
+    margin-right: 0;
+}
+
 .activity-text {
     background-color: #999999;
     color: #FFFFFF;
@@ -188,15 +270,58 @@ h6 {
 .activity-link {
     text-decoration: none;
 }
+
+.activity-img {
+    display: block;
+}
+
 /*Наша Команда--------------------*/
 
+.section.team {
+    background-color: #F5F4FA;
+}
+
+.team-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.team-card {
+    width: calc((100%-3*30px)/4);
+    margin-right: 30px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    text-align: center;
+}
+
+.team-card:last-child {
+    margin-right: 0;
+}
+
+.team-card>img {
+    display: block;
+}
+
+.team-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .team-subtitle {
+    margin-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
 }
 
 .team-text {
+    margin: 0;
+
     font-size: 16px;
     line-height: 1.19;
 }
@@ -204,16 +329,42 @@ h6 {
 /*ПОДВАЛ САЙТА---------------------------*/
 
 /*Наши Данные--------------------------*/
-.address-text {
-    background-color: #999999;
+
+footer {
+    background-color: #2F303A;
+}
+
+.address-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.address-footer>.logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.address-list {
+    margin: 0;
+    padding: 0;
+}
+
+.address-item {
+    margin-bottom: 9px;
+}
+
+.address-item:last-child {
+    margin-bottom: 0;
+}
+
+.address-link>span {
     color: #FFFFFF;
     font-size: 14px;
     line-height: 1.71;
 }
 
 .address-link {
-    background-color: #999999;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
@@ -222,16 +373,19 @@ h6 {
 
 /*Наши Соц.Сети---------------*/
 .social {
-    background-color: #999999;
     color: #FFFFFF;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
 }
+
 /*========================================*/
 
+
+
 /*СТРАНИЦА ПОРТФОЛИО---------------------*/
+
 
 /*ГЛАВНЫЙ КОНТЕНТ СТРАНИЦЫ---------------*/
 /*Блок Кнопок----------------------------*/
